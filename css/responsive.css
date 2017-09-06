@@ -1,0 +1,1290 @@
+@charset "UTF-8";
+@font-face {
+	font-family: 'built_bd';
+	src: url('fonts/built_sb.eot');
+	src: local('☺'), url('fonts/built_sb.woff') format('woff'), url('fonts/built_sb.ttf') format('truetype'), url('fonts/built_sb.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#alert {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+}
+#alert_msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 10px;
+    margin: -160px 0px 0px -150px;
+    background: #000;
+    border: 2px solid #DF2229;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+#alert_title {
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    color: #DF2229;
+    text-align: center;
+}
+#alert_text {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 20px;
+}
+#alert_buttons {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#pedido_fechaEntrega {
+    position: relative;
+    z-index: 10;
+}
+
+@media screen and (max-width: 959px) {
+    /* ESCONDER */
+    #home_banner, #menu_web_home, .footer_web, #menu_tienda_home, .menu_web_internas, .menu_tienda_internas, #chef_img_web, .page_title_web, .carrito_web_title, .tr_web, .carrito_image, .carrito_res_image, #menu_web_botones {
+        display: none !important;
+    }
+    
+    /* ESTILOS */
+    .half_web {
+        float: left;
+        width: 100%;
+    }
+    #head_registro {
+        background: #000;
+        z-index: 100;
+    }
+    #page_login {
+        background: url(../images/web/bg_login.jpg) no-repeat center;
+        background-size: cover;
+    }
+    #login_left {
+        padding-top: 110px;
+        text-align: center;
+    }
+    #login_right {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    #reg_web_title {
+        height: 50px;
+    }
+    #reg_web_title img {
+        height: 100%;
+        width: auto;
+    }
+    #pagar_PSE img {
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 960px) {
+    /* ESCONDER */
+    .page_head, #menuLateral_cont, .menu_bottom, #menu_tienda, #perfil_bg, .carrito_titles, #canasta_map_center, #buscador_cont {
+        display: none !important;
+    }
+    /* ESTILOS */
+    #alert_msg {
+        width: 400px;
+        padding: 20px;
+        margin: -160px 0px 0px -200px;
+    }
+    .page_content {
+        bottom: 0px !important;
+        top: 0px !important;
+    }
+    .btn_30 {
+        height: 35px;
+        font-size: 18px;
+    }
+    #chef_comidasCant_text {
+        padding: 0px 70px;
+        font-size: 16px;
+        top: -5px;
+        background: url(../images/web/arrow.png) no-repeat;
+        background-position: 182px 10px;
+    }
+    #home_banner {
+        float: left;
+        width: 100%;
+        height: 450px;
+        margin-top: 78px;
+        margin-bottom: 50px;
+    }
+    #home_banner_buttons {
+        position: absolute;
+        top: 74px;
+        right: 0px;
+        width: 150px;
+        margin: 20px 20px 0px 0px;
+        z-index: 20;
+    }
+    .app_button_facebook {
+        width: 100%;
+        text-align: center;
+    }
+    #product_agregar_btnTitle {
+        padding-top: 10px;
+        font-size: 22px;
+    }
+    #product_agregar_btn {
+        cursor: pointer;
+    }
+    .page_content_tienda {
+        top: 0px !important;
+    }
+    #home_banner_items {
+        float: left;
+        width: 100%;
+        height: 100%;
+    }
+    .home_banner_item {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #home_banner_1 {
+        background-image: url(../images/web/banner_1.jpg);
+    }
+    #banner_left {
+        position: absolute;
+        top: 15%;
+        left: 8%;
+        width: 35%;
+        height: 70%;
+        padding: 30px;
+        background: rgba(255,255,255,0.5);
+        border-radius: 30px;
+    }
+    #banner_left_1 {
+        float: left;
+        width: 100%;
+        color: #000;
+        font-size: 30px;
+        text-align: center;
+    }
+    #banner_left_2 {
+        float: left;
+        width: 100%;
+        font-family: 'mont_sb';
+        color: #000;
+        font-size: 44px;
+        text-align: center;
+    }
+    #banner_right {
+        position: absolute;
+        top: 15%;
+        left: 53%;
+        width: 35%;
+        height: 70%;
+        background: #fff;
+        padding: 30px;
+        border-radius: 30px;
+    }
+    #banner_marcas {
+        float: left;
+        width: 100%;
+        height: 100%;
+        background: url(../images/web/marcas_banner.jpg) no-repeat center;
+        background-size: contain;
+    }
+    #home_banner_tiendas {
+        float: left;
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .home_tiendas_item {
+        display: inline-block;
+        margin: 0px 10px;
+        width: 115px;
+    }
+    .home_tiendas_item img {
+        width: 100%;
+        height: auto;
+    }
+    #tienda_items_title {
+        float: none;
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 50px;
+    }
+    #masVendidos_items {
+        float: none;
+        width: 800px;
+        margin: 0 auto;
+    }
+    #menu_web_home {
+        display: block !important;
+        position: absolute;
+        box-shadow: 0px 10px 50px #000;
+        height: 78px;
+    }
+    #menu_tienda_item_chef {
+        padding-top: 5px;
+    }
+    .fixedmenu {
+        position: fixed !important;
+        top: 0px !important;
+    }
+    .btn_cart_count_web {
+        top: -8px !important;
+        width: 38px !important;
+        height: 35px !important;
+    }
+    .menu_web_carrito {
+        float: right;
+        height: 100%;
+        margin-left: 10px;
+        padding: 15px 10px 0px 0px;
+    }
+    .menu_web_buscar {
+        float: right;
+        width: 230px;
+        height: 100%;
+        margin-left: 20px;
+        padding-top: 8px;
+    }
+    #buscador_input {
+        width: 55%;
+    }
+    #buscador_btn {
+        width: 45%;
+    }
+    #menu_web_botones {
+        position: fixed;
+        top: 150px;
+        left: 0%;
+        background: #fff;
+        width: 60px;
+        z-index: 190;
+        box-shadow: 1px 1px 10px #333;
+    }
+    #menu_web_logo {
+        float: left;
+        height: 120px;
+        padding: 0px 0px;
+        margin-left: 50px;
+    }
+    #menu_web_logo img {
+        height: 100%;
+        width: auto;
+    }
+    .menu_bottom_item {
+        height: 50px;
+        width: 100%;
+        border: 0;
+    }
+    .menu_bottom_btn {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    }
+    .menu_bottom_btn:hover, .menu_bottom_btn_selected {
+        background-position: 0px -50px;
+    }
+    .tienda_item {
+        border: 5px solid #fff;
+        width: 25%;
+    }
+    .tienda_item_chef {
+        width: 50% !important;
+    }
+    .tienda_item_img {
+        height: 220px !important;
+        cursor: pointer;
+    }
+    /*
+    .tienda_item_0 {
+        width: 50%;
+    }
+    .tienda_item_1 {
+        width: 25%;
+    }
+    .tienda_item_2 {
+        width: 25%;
+    }
+    .tienda_item_3 {
+        width: 25%;
+    }
+    .tienda_item_4 {
+        width: 25%;
+    }
+    .tienda_item_5 {
+        width: 50%;
+    }
+    .tienda_item_6 {
+        width: 25%;
+    }
+    .tienda_item_7 {
+        width: 50%;
+    }
+    .tienda_item_8 {
+        width: 25%;
+    }
+    .tienda_item_9 {
+        width: 25%;
+    }
+    .tienda_item_10 {
+        width: 25%;
+    }
+    .tienda_item_11 {
+        width: 25%;
+    }
+    .tienda_item_12 {
+        width: 25%;
+    }
+    .tienda_item_13 {
+        width: 50%;
+    }
+    .tienda_item_14 {
+        width: 25%;
+    }
+    .tienda_item_15 {
+        width: 25%;
+    }
+    .tienda_item_16 {
+        width: 25%;
+    }
+    .tienda_item_17 {
+        width: 25%;
+    }
+    .tienda_item_18 {
+        width: 50%;
+    }
+    .tienda_item_19 {
+        width: 25%;
+    }
+    .tienda_item_20 {
+        width: 50%;
+    }
+    .tienda_item_21 {
+        width: 25%;
+    }
+    */
+    .tienda_item_title {
+        font-size: 16px;
+    }
+    .tienda_item_btn {
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+    }
+    .footer_web {
+        float: left;
+        width: 100%;
+        height: 170px;
+        margin-top: 150px;
+        padding-top: 20px;
+        background: #000;
+        background-size: cover;
+    }
+    .footer_web_nobg {
+        background: none !important;
+    }
+    #footer_left {
+        float: left;
+        width: 60%;
+    }
+    #footer_left table {
+        margin: 0 auto;
+    }
+    .footer_left_td {
+        padding: 5px 20px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 16px;
+        color: #DF2229;
+    }
+    .footer_left_td img {
+        height: 30px;
+        width: auto;
+    }
+    .footer_left_td a {
+        color: #DF2229;
+    }
+    #footer_right {
+        float: left;
+        width: 40%;
+        text-align: center;
+    }
+    #footer_smm {
+        float: left;
+        width: 50%;
+    }
+    .social_ico {
+        display: inline-block;
+        margin: 0px 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .social_ico img {
+        width: 100%;
+        height: auto;
+    }
+    #footer_nwslt {
+        float: left;
+        width: 100%;
+        margin: 15px 0px;
+    }
+    #footer_nwslt_input {
+        float: left;
+        width: 50%;
+        padding: 0px 20px;
+    }
+    #footer_nwslt_btn {
+        float: left;
+        width: 50%;
+        padding: 0px 20px;
+    }
+    #suscribirse_email {
+        font-size: 16px;
+    }
+    #footer_modospago {
+        float: left;
+        width: 50%;
+        height: 25px;
+        margin-top: 0px;
+        padding: 0px 20px;
+        text-align: center;
+    }
+    #footer_modospago img {
+        height: 100%;
+        width: auto;
+    }
+    #menu_tienda {
+        top: 100px;
+        display: none;
+    }
+    #menu_tienda_home {
+        float: right;
+        width: 450px;
+        height: 100%;
+    }
+    .menu_tienda_item {
+        position: relative;
+        padding-top: 5px;
+    }
+    #menu_tienda_chef {
+        width: 80px;
+        height: 50px;
+        padding-top: 50px;
+        background-image: url(../images/web/chef_icon.png) !important;
+        background-size: 54px;
+        color: #000;
+    }
+    .menu_tienda_btn {
+        width: 50px;
+        height: 50px;
+        padding-top: 50px;
+        background-size: cover;
+        background-position: 0px -50px;
+        background-color: #fff;
+        color: #000;
+    }
+    #charc_fix {
+        position: absolute;
+        -ms-transform: translate(-35px, 0px); /* IE 9 */
+        -webkit-transform: translate(-35px, 0px); /* Safari */
+        transform: translate(-35px, 0px);
+    }
+    #cheffix {
+        white-space: nowrap;
+        position: absolute;
+        -ms-transform: translate(-33px, 0px); /* IE 9 */
+        -webkit-transform: translate(-33px, 0px); /* Safari */
+        transform: translate(-33px, 0px);
+    }
+    .menu_tienda_btn:hover, .menu_tienda_btn_selected {
+        background-position: 0px 0px;
+        background-color: #000;
+    }
+    .menu_web_internas {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        box-shadow: 0px 10px 50px #000;
+        height: 78px;
+        z-index: 20;
+        background: #fff;
+    }
+    .menu_tienda_internas {
+        position: absolute;
+        top: 78px;
+        width: 768px;
+        z-index: 10;
+        height: 88px;
+        left: 50%;
+        margin-left: -384px;
+        margin-top: 40px;
+    }
+    #categoria_items, #productos_items {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 78px;
+    }
+    #producto_detalle_web {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 150px;
+    }
+    .categoria_img {
+        height: 246px;
+        cursor: pointer;
+    }
+    .categoria_item_btn {
+        cursor: pointer;
+    }
+    .categoria_title {
+        font-size: 20px;
+        text-align: center;
+    }
+    #product_img {
+        width: 50%;
+        height: 490px;
+    }
+    #product_title {
+        float: right;
+        width: 48%;
+        font-size: 16px;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    #product_price {
+        float: right;
+        width: 48%;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    #product_presentation {
+        float: right;
+        width: 48%;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    #product_agregar {
+        float: right;
+        width: 48%;
+        margin-top: 20px;
+    }
+    #product_description {
+        float: right;
+        width: 48%;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .tienda_item_icon {
+        width: 65px;
+        height: 65px;
+        background-size: 300px 60px;
+    }
+    .tienda_item_icon_res {
+        background-position: -60px 2px;
+    }
+    .tienda_item_icon_cerdo {
+        background-position: 0px 0px;
+    }
+    .tienda_item_icon_pollo {
+        background-position: -120px 0px;
+    }
+    .tienda_item_icon_pez {
+        background-position: -180px 0px;
+    }
+    .tienda_item_icon_charc {
+        background-position: -240px 0px;
+    }
+    #product_category {
+        width: 65px;
+        height: 65px;
+        background-size: 300px 60px;
+    }
+    #page_chef_web {
+        margin-top: 120px;
+    }
+    #chef_content_web {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+    }
+    #chef_title_web {
+        position: relative;
+        width: 50%;
+        padding: 36px 0px 0px 50px;
+    }
+    #chef_img_web {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100px;
+        height: 100px;
+        background: url(../images/chef_title.png) no-repeat center;
+        background-size: cover;
+    }
+    #chef_form_cont {
+        width: 300px;
+        margin-left: 90px;
+    }
+    #chef_title {
+        background-image: none;
+        padding: 20px 0px;
+        height: inherit;
+    }
+    #chef_title_top {
+        font-size: 28px;
+    }
+    #chef_title_bottom {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    #chef_description {
+        background: #ef6d72;
+        color: #fff;
+        padding: 30px 0px;
+        border-radius: 30px;
+        font-family: 'mont_li';
+    }
+    .page_title_web {
+        float: left;
+        width: 100%;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    .page_title_web_left {
+        float: left;
+        width: 45%;
+        height: 90px;
+        border-bottom: 1px solid #000;
+    }
+    .page_title_web_img {
+        float: left;
+        width: 10%;
+        height: 100%;
+        text-align: center;
+    }
+    .page_title_web_img img {
+        width: 100%;
+    }
+    .page_title_web_right {
+        float: left;
+        width: 45%;
+        height: 90px;
+        border-bottom: 1px solid #000;
+    }
+    #chef_filtros {
+        position: absolute;
+        left: 50%;
+        top: 78px;
+        margin-left: 5px;
+        padding-right: 10px;
+        width: 480px;
+        background: #fff;
+        padding-top: 80px;
+        z-index: 10;
+    }
+    #sugerencias_items {
+        position: relative;
+        width: 480px;
+        left: calc(50vw);
+        margin-top: 188px;
+    }
+    .chef_item_img {
+        height: 230px !important;
+    }
+    .chef_filtro {
+        background: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 7px 0px 0px 0px;
+        font-family: 'mont_li';
+    }
+    #chef_agregar {
+        bottom: inherit;
+        top: 158px;
+        left: 50%;
+        margin-left: -480px;
+        width: 480px;
+        z-index: 20;
+        padding: 20px;
+    }
+    #chef_agregar_info_personas {
+        width: 50%;
+        height: 100px;
+        border-bottom: 1px solid #fff;
+    }
+    #chef_agregar_info_preferencias {
+        width: 50%;
+        height: 100px;
+        border-right: 0;
+        border-bottom: 1px solid #fff;
+    }
+    #chef_agregar_info_dias {
+        width: 50%;
+        height: 100px;
+    }
+    #chef_agregar_info_comidas {
+        width: 50%;
+        height: 100px;
+        border-right: 0;
+    }
+    #chef_agregar_info_total {
+        width: 100%;
+        height: auto;
+        margin-top: 5px;
+        padding: 0px 50px;
+    }
+    .chef_filtro_sel {
+        color: #fff;
+        background: #df2229;
+    }
+    .chef_agregar_img {
+        text-align: left;
+        height: 50px;
+    }
+    .chef_agregar_info_num {
+        font-size: 24px;
+    }
+    .chef_agregar_info_sub {
+        font-size: 14px;
+    }
+    #chef_agregar_info_preferencias table {
+        height: auto;
+    }
+    .chef_agregar_preficons_item {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 60px;
+        background-position: 0px -30px;
+    }
+    #chef_agregar_comidas {
+        font-size: 18px;
+    }
+    #chef_agregar_info_total_title {
+        font-size: 26px;
+    }
+    #chef_agregar_info_total_precio {
+        font-size: 24px;
+    }
+    .chef_quitarbtn, .chef_agregarbtn, .chef_btn, .chef_preferencias_btn {
+        cursor: pointer;
+    }
+    #marcas_items {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 120px;
+    }
+    .marcas_item {
+        width: 25%;
+        cursor: pointer;
+    }
+    #promos_items {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 120px;
+    }
+    .promos_item {
+        width: 33.33%;
+        border: 5px solid #fff;
+    }
+    .promos_img {
+        height: 250px !important;
+        cursor: pointer;
+    }
+    .tienda_item_title {
+        height: 37px;
+    }
+    #pedidos_web_cont {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 120px;
+    }
+    #pedido_detalle_web {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 150px;
+        font-size: 16px;
+    }
+    #pedido_detalle_footer {
+        margin: 50px 0px 20px 0px;
+    }
+    .pedido_item {
+        cursor: pointer;
+        background: #000;
+    }
+    .pedido_item:hover {
+        background: #666666;
+    }
+    #pedido_detalle_id {
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .carrito_item {
+        position: relative;
+        font-size: 16px;
+        width: 46%;
+        height: 195px;
+        border-bottom: 1px solid #DF2229;
+        margin: 0 2%;
+        padding: 20px 0px;
+    }
+    #perfil_info {
+        position: static;
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 120px;
+    }
+    #perfil_profilePic {
+        position: relative;
+        float: left;
+        width: 240px;
+        height: 240px;
+        margin-top: 20px;
+        margin-left: 90px;
+    }
+    #perfil_camera {
+        width: 88px;
+        height: 88px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .perfil_actions {
+        float: right;
+        width: 50%;
+    }
+    #perfil_actions_edit {
+        width: 100%;
+    }
+    #perfil_nombre {
+        width: 50%;
+        float: right;
+        font-size: 24px;
+        margin-top: 0px;
+    }
+    #perfil_correo {
+        width: 50%;
+        float: right;
+        font-size: 22px;
+    }
+    #perfil_celular {
+        width: 50%;
+        float: right;
+        font-size: 22px;
+    }
+    #perfil_web_abajo {
+        float: right;
+        width: 50%;
+        margin-top: 40px;
+    }
+    #perfil_noregistrado_Registrarse {
+        width: 50%;
+        float: right;
+    }
+    #direcciones_items {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 120px;
+    }
+    #direcciones_web_actions {
+        float: left;
+        width: 100%;
+        padding: 0px 34%;
+        margin-top: 80px;
+    }
+    .direccion_item {
+        font-size: 18px;
+    }
+    .direccion_borrar_btn {
+        background-size: 24px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .perfil_editar_web {
+        margin-top: 200px !important;
+    }
+    #completarPerfil_info {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 200px;
+    }
+    .perfil_editar_web {
+        margin-top: 200px !important;
+    }
+    #page_modopago_web {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 120px;
+    }
+    #web_modopago1 {
+        padding-left: 40px;
+    }
+    #web_modopago2 {
+        padding-right: 40px;
+    }
+    #page_content_privacidad, #page_content_terminos {
+        top: 78px !important;
+        bottom: 170px !important;
+    }
+    .footer_web_fixed {
+        position: fixed;
+        bottom: 0px;
+    }
+    #page_content_pedidos_web, #page_content_dir_web, #page_content_direcciones, #page_content_map {
+        bottom: 170px !important;
+    }
+    #page_content_canasta_1, #page_content_canasta_2 {
+        padding: 0px 0px !important;
+    }
+    #page_content_canasta_pse {
+        padding: 0px 0px !important;
+    }
+    #canasta_completo {
+        margin-top: 200px;
+    }
+    #page_canasta_4 {
+        background: url(../images/web/bg_full.jpg) no-repeat center;
+        background-size: cover;
+    }
+    #canasta_completo_1 {
+        color: #DF2229;
+        font-size: 24px;
+    }
+    #canasta_completo_2 {
+        color: #000;
+        font-size: 18px;
+    }
+    #page_login {
+        background: url(../images/web/bg_login.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .half_web {
+        float: left;
+        width: 50%;
+    }
+    #login_left {
+        margin-top: 150px;
+        padding-left: 10%;
+    }
+    #login_right {
+        margin-top: 150px;
+        padding-right: 10%;
+    }
+    #web_loginbtn {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .app_button_facebook_web {
+        width: auto !important;
+    }
+    #web_loginfb_button {
+        text-align: center;
+        margin-top: 55px;
+    }
+    #login_terms_container {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .half_web_inputs {
+        width: 40%;
+    }
+    #reg_web_title {
+        float: left;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 30px;
+        text-align: center;
+        padding-left: 10%;
+    }
+    #reg_web_title img {
+        height: 100%;
+    }
+    #registro_aceptarTerms {
+        margin: 10px 0px 20px 10%;
+    }
+    #login_form {
+        text-align: center;
+    }
+    #restablecerweb {
+        width: 600px;
+        float: none;
+        margin: 0 auto;
+        margin-top: 200px;
+    }
+    #page_title_canasta {
+        margin-top: 120px;
+    }
+    .carrito_image {
+        float: left;
+        width: 35%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .carrito_image img {
+        float: left;
+        height: 100%;
+        width: auto;
+    }
+    .carrito_web_title {
+        color: #DF2229;
+        line-height: 2;
+    }
+    .carrito_producto {
+        position: absolute;
+        top: 15px;
+        left: 37%;
+        width: 63%;
+        padding-top: 0px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #DF2229;
+    }
+    .carrito_cantidad {
+        position: absolute;
+        top: 110px;
+        left: 37%;
+        width: 30%;
+    }
+    .carrito_costo {
+        position: absolute;
+        top: 110px;
+        left: 69%;
+        width: 31%;
+    }
+    .carrito_agregar {
+        position: absolute;
+        width: 20px;
+        top: 146px;
+        left: 65%;
+        margin-left: -20px;
+        z-index: 20;
+    }
+    .carrito_borrar {
+        position: absolute;
+        width: 20px;
+        top: 146px;
+        left: 39%;
+        z-index: 20;
+    }
+    #canasta_1_footer {
+        float: right;
+        width: 30%;
+        margin-bottom: 100px;
+    }
+    #canasta_1_total_title {
+        text-align: right;
+    }
+    .td_web_title {
+        text-align: center;
+        color: #DF2229 !important;
+        font-size: 18px;
+        padding-bottom: 20px !important;
+    }
+    #canasta_direcciones_items {
+        margin-top: 150px;
+    }
+    .canasta_direccion_item {
+        width: 46%;
+        margin: 20px 2%;
+        cursor: pointer;
+    }
+    #perfil_actions_2 {
+        text-align: right;
+        margin-right: 2%;
+    }
+    #page_canasta_map {
+        background: #000;
+    }
+    #page_content_map {
+        top: 110px !important;
+    }
+    #map_direccion {
+        position: relative;
+        float: none;
+        width: 800px;
+        height: 100px;
+        margin: 0 auto;
+        border: 0;
+    }
+    #canasta_map {
+        top: 100px;
+    }
+    #map_footer {
+        padding: 10px 26%;
+        height: 50px;
+    }
+    .carrito_res_image {
+        float: left;
+        width: 40%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .carrito_res_image img {
+        float: left;
+        height: 100%;
+        width: auto;
+    }
+    #page_content_canasta_3 {
+        margin-top: 140px;
+    }
+    #canasta_3_cnts {
+        width: 800px;
+        float: none;
+        margin: 0 auto;
+    }
+    .carrito_item_red {
+        height: 200px !important;
+    }
+    .carrito_producto2 {
+        top: 30px !important;
+    }
+    .carrito_cantidad2 {
+        top: 100px !important;
+    }
+    .carrito_costo2 {
+        top: 100px !important;
+    }
+    #carrito_3_datos {
+        font-size: 16px;
+    }
+    #input_foto {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        opacity: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    #page_terminos, #page_privacidad {
+        background: #fff;
+    }
+    #page_pedidos {
+        background: #fff;
+    }
+    .sinpedidos {
+        background: #ccc !important;
+    }
+    .submenu {
+        position: absolute;
+        background: #000;
+        width: 250px;
+        font-size: 14px;
+        top: 78px;
+        left: 0;
+        margin-left: -80px;
+        display: none;
+    }
+    .categoria_menu_item {
+        float: left;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .categoria_menu_item:hover {
+        background: #df2229;
+    }
+    .menu_tienda_item:hover :nth-child(2) { 
+        display: block; 
+    }
+    #cont_canasta_1, #cont_canasta_2, #cont_canasta_3, #cont_canasta_dir {
+        float: none;
+        width: 800px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .form_button {
+        display: inline-block;
+        width: 100%;
+        background: #df2229;
+        padding: 3px;
+        text-align: center;
+        font-family: 'built_bd';
+        color: #fff;
+        letter-spacing: 1px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        overflow: hidden;
+        border: 3px solid #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+@media screen and (min-width: 1100px) {
+    #masVendidos_items, #categoria_items, #productos_items, #producto_detalle_web, #promos_items, #tienda_items_title, #pedido_detalle_web, #cont_canasta_1, #cont_canasta_2, #cont_canasta_dir, #canasta_3_cnts {
+        width: 960px;
+    }
+    .menu_web_buscar {
+        width: 350px;
+    }
+    #buscador_btn {
+        width: 30%;
+    }
+    #buscador_input {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #masVendidos_items, #categoria_items, #productos_items, #producto_detalle_web, #promos_items, #tienda_items_title, #pedido_detalle_web, #cont_canasta_1, #cont_canasta_2, #cont_canasta_dir, #canasta_3_cnts {
+        width: 1050px;
+    }
+    #banner_left_1 {
+        font-size: 40px;
+    }
+    #banner_left_2 {
+        font-size: 56px;
+    }
+    #home_banner_tiendas {
+        margin-top: 30px;
+    }
+    .home_tiendas_item {
+        width: 150px;
+    }
+    #menu_tienda_home {
+        width: 540px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    #masVendidos_items, #categoria_items, #productos_items, #producto_detalle_web, #promos_items, #tienda_items_title {
+        width: 1500px;
+    }
+    .tienda_item {
+        width: 20% !important;
+    }
+    .tienda_item_chef {
+        width: 50% !important;
+    }
+}
